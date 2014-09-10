@@ -32,7 +32,7 @@
 			<div id="login">
 				<form name="loginForm" action="${loginUrl}" method="post">
 					<table style="width: 20px;">
-						<caption align="left">Login:</caption>
+						<caption align="left">${labelLogin}:</caption>
 						<tr>
 							<td>User Name:</td>
 							<td><input type="text" name="j_username" /></td>
@@ -43,7 +43,7 @@
 						</tr>
 						<tr>
 							<td colspan="2" align="center"><input name="submit"
-								type="submit" value="Login" /></td>
+								type="submit" value="${labelLogin}" /></td>
 						</tr>
 					</table>
 				</form>

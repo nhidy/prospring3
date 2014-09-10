@@ -19,13 +19,15 @@
 	<security:global-method-security
 		pre-post-annotations="enabled" />
 
+	<!-- Configure i18n (change language) -->
 	<resources location="/, classpath:/META-INF/web-resources/"
 		mapping="/resources/**" />
-
 	<default-servlet-handler />
+	<!-- -->
 
 	<context:component-scan base-package="com.nhidy.ch17madebymyself.controller" />
 
+	<!-- Configure i18n (change language) -->
 	<interceptors>
 		<beans:bean
 			class="org.springframework.web.servlet.theme.ThemeChangeInterceptor" />
@@ -33,14 +35,13 @@
 			class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"
 			p:paramName="lang" />
 	</interceptors>
-
 	<beans:bean
 		class="org.springframework.context.support.ReloadableResourceBundleMessageSource"
 		id="messageSource" p:basenames="WEB-INF/i18n/messages,WEB-INF/i18n/application"
 		p:fallbackToSystemLocale="false" />
-
 	<beans:bean class="org.springframework.web.servlet.i18n.CookieLocaleResolver"
 		id="localeResolver" p:cookieName="locale" />
+	<!-- -->
 
 	<beans:bean
 		class="org.springframework.ui.context.support.ResourceBundleThemeSource"
