@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	<definition extends="default" name="orgs/list">
+		<put-attribute name="body" value="/WEB-INF/views/orgs/list.jsp" />
+	</definition>
+	<!-- <definition extends="default" name="orgs/show">
+		<put-attribute name="body" value="/WEB-INF/views/orgs/show.jsp" />
+	</definition> -->
+	<definition extends="default" name="orgs/show">
+		<put-attribute name="body" value="/WEB-INF/views/orgs/edit.jsp" />
+	</definition>
+	<definition extends="default" name="orgs/update">
+		<put-attribute name="body" value="/WEB-INF/views/orgs/edit.jsp" />
+	</definition>
+	<definition extends="default" name="orgs/create">
+		<put-attribute name="body" value="/WEB-INF/views/orgs/edit.jsp" />
+	</definition>
+</tiles-definitions>
